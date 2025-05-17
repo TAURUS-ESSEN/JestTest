@@ -48,18 +48,14 @@ function caesarCipher(str, shift) {
     return cesarCode
 }
 
-console.log(caesarCipher('abc',3))
-console.log(caesarCipher("XZZ",2))
-
 const object = analyzeArray([1,8,3,4,2,6]);
 
 function analyzeArray(array) {
     let tempArray = [...array];
     tempArray.sort((a,b) => a-b);
-    let averageValue = tempArray.reduce((acc,num) => acc+num,0) / tempArray.length
+    let averageValue = tempArray.reduce((acc,num) => acc+num,0) / tempArray.length;
     return {length:array.length, min: tempArray[0], max: tempArray[tempArray.length-1], average: averageValue }
 } 
-console.log(object)
 
 module.exports = {
     getStr,
